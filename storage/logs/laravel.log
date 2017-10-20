@@ -1,0 +1,45 @@
+[2017-05-02 18:42:36] local.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "server" is not defined.
+
+Did you mean this?
+    serve' in /Users/mmestre/Documents/Sites/laravel-lti/vendor/symfony/console/Application.php:556
+Stack trace:
+#0 /Users/mmestre/Documents/Sites/laravel-lti/vendor/symfony/console/Application.php(197): Symfony\Component\Console\Application->find('server')
+#1 /Users/mmestre/Documents/Sites/laravel-lti/vendor/symfony/console/Application.php(124): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(122): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /Users/mmestre/Documents/Sites/laravel-lti/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2017-05-02 18:46:33] local.ERROR: exception 'ErrorException' with message 'Undefined index: iLeaf2' in /Users/mmestre/Documents/Sites/laravel-lti/app/Http/Controllers/Lti_launch.php:49
+Stack trace:
+#0 /Users/mmestre/Documents/Sites/laravel-lti/app/Http/Controllers/Lti_launch.php(49): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined index...', '/Users/mmestre/...', 49, Array)
+#1 [internal function]: App\Http\Controllers\Lti_launch->__construct()
+#2 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Container/Container.php(752): ReflectionClass->newInstanceArgs(Array)
+#3 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Container/Container.php(598): Illuminate\Container\Container->build('App\\Http\\Contro...')
+#4 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Container/Container.php(567): Illuminate\Container\Container->resolve('App\\Http\\Contro...')
+#5 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(708): Illuminate\Container\Container->make('App\\Http\\Contro...')
+#6 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Routing/Route.php(217): Illuminate\Foundation\Application->make('App\\Http\\Contro...')
+#7 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Routing/Route.php(736): Illuminate\Routing\Route->getController()
+#8 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Routing/Route.php(697): Illuminate\Routing\Route->controllerMiddleware()
+#9 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->gatherMiddleware()
+#10 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Routing/Router.php(552): Illuminate\Routing\Router->gatherRouteMiddleware(Object(Illuminate\Routing\Route))
+#11 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Routing/Router.php(520): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#12 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Routing/Router.php(498): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#13 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(174): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#14 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#15 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#20 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#25 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(149): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#29 /Users/mmestre/Documents/Sites/laravel-lti/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#30 /Users/mmestre/Documents/Sites/laravel-lti/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#31 /Users/mmestre/Documents/Sites/laravel-lti/server.php(21): require_once('/Users/mmestre/...')
+#32 {main}  
